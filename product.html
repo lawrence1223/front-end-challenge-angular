@@ -1,0 +1,13 @@
+<div class="col-sm-4 product-container">
+  <a class="product-link" ng-href="{{product.url}}">
+    <img ng-src="{{product.photos.medium_half}}">
+    <div class="description">
+      <div class="product-title">{{product.name}}</div>
+      <div class="product-tagline">{{product.tagline}}</div>
+    </div>
+  </a>
+  <div class="overlay">
+    <a href="#" ng-click="removeHandler({index: index})" class="close" />
+    <p class="product-description">{{product.description}}</p>
+  </div>
+</div>

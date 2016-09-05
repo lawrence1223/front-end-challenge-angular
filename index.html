@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="touchOfModern">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Touch of Modern</title>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script type="text/javascript" src="http://code.angularjs.org/1.4.8/angular-animate.js"></script>
+    <script src="app.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="style.css" media="screen" rel="stylesheet">
+  </head>
+<body ng-controller="touchCtrl" ng-class="{ 'loading': loading}">
+
+<div class="container">
+
+  <h1 class="title">Welcome to Touch of Modern</h1>
+  <div class="tagline">Live beyond expectations</div>
+  <div ng-repeat="product in products" class="repeat-item">
+    <slick-product
+      product="product"
+      index="$index"
+      remove-handler="removeHandler(index)">
+    </slick-product>
+  </div>
+
+</div>
+
+<div class="modal"></div>
+
+</body>
+</html>
